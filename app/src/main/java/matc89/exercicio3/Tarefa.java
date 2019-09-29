@@ -1,6 +1,10 @@
 package matc89.exercicio3;
 
-public class Tarefa {
+import android.support.annotation.NonNull;
+
+import java.util.Collections;
+
+public class Tarefa implements Comparable{
     private String descricao;
     private int prioridade;
 
@@ -15,5 +19,15 @@ public class Tarefa {
 
     public int getPrioridade() {
         return prioridade;
+    }
+
+    @Override
+    public int compareTo(@NonNull Object o) {
+        return prioridade - ((Tarefa)o).getPrioridade();
+    }
+
+    @Override
+    public String toString() {
+        return descricao + ' ' + prioridade;
     }
 }
