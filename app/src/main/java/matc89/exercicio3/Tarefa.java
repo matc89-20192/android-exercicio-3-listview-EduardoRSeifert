@@ -26,8 +26,4 @@ public class Tarefa implements Comparable{
         return prioridade - ((Tarefa)o).getPrioridade();
     }
 
-    @Override
-    public String toString() {
-        return descricao + ' ' + prioridade;
-    }
 }
